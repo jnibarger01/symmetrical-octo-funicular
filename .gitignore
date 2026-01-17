@@ -1,5 +1,14 @@
-# Python
-__pycache__/
+# Test / coverage cruft
+
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+
+# Python bytecode & artifacts
+
+**pycache**/
 *.py[cod]
 *$py.class
 *.so
@@ -23,12 +32,14 @@ share/python-wheels/
 MANIFEST
 
 # Virtual environments
+
+.venv/
 venv/
 ENV/
 env/
-.venv
 
-# IDEs
+# IDEs / editors
+
 .vscode/
 .idea/
 *.swp
@@ -37,23 +48,24 @@ env/
 .DS_Store
 
 # Testing
-.pytest_cache/
-.coverage
-htmlcov/
+
 .tox/
 .hypothesis/
 
 # Codex Agent specific
+
 .codex/
 *.db
 *.db-journal
 
 # Environment files
+
 .env
 .env.local
 secrets/
 *.pem
 *.key
 
-# Build artifacts
+# Build / runtime logs
+
 *.log
