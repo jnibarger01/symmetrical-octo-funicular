@@ -111,7 +111,7 @@ strict_equality = true
 module = "tests.*"
 disallow_untyped_defs = false
 
-[tool.ruff]
+[tool.ruff.lint]
 target-version = "py311"
 line-length = 100
 select = [

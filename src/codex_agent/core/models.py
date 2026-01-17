@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Any, Optional
 
 from pydantic import BaseModel, Field
-from ulid import ULID
+from uuid import uuid4
 
 
 class LifecycleState(str, Enum):
@@ -91,7 +91,7 @@ class Verification(BaseModel):
 class Task(BaseModel):
     """Task model representing a unit of work."""
 
-    id: str = Field(default_factory=lambda: str(ULID()), description="Unique task ID")
+    id: str = Field(default_factory=lambda: str(uuid4()), description="Unique task ID")
     type: TaskType = Field(..., description="Task type")
     title: str = Field(..., description="Human-readable title")
     description: str = Field(..., description="Detailed task description")
